@@ -1,0 +1,35 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Run ColorExtract.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/ColorExtract.py"
+		},
+		{
+			"name": "Run CreateVideo.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/CreateVideo.py"
+		},
+		{
+			"name": "Run RGBPlot.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/RGBPlot.py"
+		},
+		{
+			"name": "Run VideoRGB.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/VideoRGB.py"
+		},
+		{
+			"name": "Run ColorPick.py",
+			"type": "python",
+			"request": "launch",
+			"program": "${workspaceFolder}/ColorPick.py"
+		}
+	]
+}
