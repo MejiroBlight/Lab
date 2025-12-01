@@ -1,8 +1,10 @@
 import re
 import json
-from geopy.geocoders import Nominatim
+from geopy.geocoders import GoogleV3
+from params import Params
 
-geolocator = Nominatim(user_agent="spa_locator")
+
+geolocator = GoogleV3(Params.API_KEY)
 
 def parse_facility_block(block):
     # 施設名
@@ -12,7 +14,8 @@ def parse_facility_block(block):
     # 住所（市町村＋番地）
     address = re.search(r"<a href='[^']*'>(.*?)</a>([^<]*)", block)
     city = "石川県" + address.group(1) if address else None
-    location = geolocator.geocode(city) if city else None
+    full_address = city + address.group(2).strip() if address else None
+    location = geolocator.geocode(full_address) if full_address else None
     print(city, location)
     latitude = location.latitude if location else None
     longitude = location.longitude if location else None

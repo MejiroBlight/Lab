@@ -1,0 +1,5 @@
+class Params:
+    API_KEY = 'AIzaSyBD5aA8mBYKifARIywsOUlFaORJdIjdCzQ'
+    N_ESTIMATORS=200
+    MAX_DEPTH=10
+    RANDOM_STATE=42
